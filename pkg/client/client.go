@@ -135,9 +135,6 @@ func (c *Client) Connect() error {
 				}
 
 				requestURI := fmt.Sprintf("%s%s", proxyHost, req.URL.String())
-				if len(req.URL.RawQuery) > 0 {
-					requestURI = requestURI + "?" + req.URL.RawQuery
-				}
 
 				log.Printf("[%s] proxy => %s", inletsID, requestURI)
 
